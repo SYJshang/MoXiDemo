@@ -41,6 +41,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>是否允许使用时获取您的当前位置</string>
+	<string>Whether to allow access when using your current location</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Whether to allow access to your photo album</string>
 </dict>
 </plist>

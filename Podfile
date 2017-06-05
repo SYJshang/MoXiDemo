@@ -14,5 +14,7 @@ pod 'FDFullscreenPopGesture', '1.1'
 pod 'MJRefresh'
 pod 'MJExtension'
 pod 'MBProgressHUD', '~> 1.0.0'
+pod 'JPush'
+pod 'UMengAnalytics-NO-IDFA'
 
 end

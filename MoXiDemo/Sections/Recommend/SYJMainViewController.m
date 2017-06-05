@@ -13,8 +13,10 @@
 
 //#define NSLog(FORMAT, ...) fprintf(stderr,"%s",[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
 
-@interface SYJMainViewController ()<UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate>{
+@interface SYJMainViewController ()<UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate,SDPhotoBrowserDelegate>{
     int a;
+    SDPhotoBrowser *photoBrowser;
+
 }
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -107,9 +109,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Recommend";
+    self.navigationItem.titleView = [UILabel titleWithColor:TextColor title:@"Recommend" font:18.0];
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
 
@@ -216,9 +218,9 @@
         
     }else{
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                             message:@"您没有开启定位功能"
+                                                             message:@"you not the location"
                                                             delegate:nil
-                                                   cancelButtonTitle:@"确定"
+                                                   cancelButtonTitle:@"OK"
                                                    otherButtonTitles:nil,nil];
         [alertView show];  
     }
@@ -272,12 +274,10 @@
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
         
         if(error || placemarks.count == 0){
-            NSLog(@"error = %@",error);
         }else{
             
             CLPlacemark* placemark = placemarks.firstObject;
-            NSLog(@"placemark:%@",[[placemark addressDictionary] objectForKey:@"City"]);
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"你的位置" message:[[placemark addressDictionary] objectForKey:@"City"] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil,nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Your Localtion" message:[[placemark addressDictionary] objectForKey:@"City"] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
             
             [alert show];  
             
@@ -378,7 +378,46 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+//    SYJPicTableCell *cell = (SYJPicTableCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    
+    SYJPicRecommendModel *model = self.listArr[indexPath.row];
+    
+    if (!NULLString(model.image_url)) {
+        
+        photoBrowser = [SDPhotoBrowser new];
+        photoBrowser.delegate = self;
+        photoBrowser.currentImageIndex = 0;
+        photoBrowser.imageCount = 1;
+        photoBrowser.sourceImagesContainerView = self.tableView;
+        [photoBrowser show];
+    }
+    
+   
+
 }
+
+// 返回临时占位图片（即原来的小图）
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index
+{
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    // 不建议用此种方式获取小图，这里只是为了简单实现展示而已
+    SYJPicTableCell *cell = (SYJPicTableCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    
+    return cell.img.image;
+    
+}
+
+
+// 返回高质量图片的url
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    // 不建议用此种方式获取小图，这里只是为了简单实现展示而已
+    SYJPicRecommendModel *model = self.listArr[indexPath.row];
+    return [NSURL URLWithString:model.image_url];
+}
+
 
 //cell动画
 
@@ -430,10 +469,7 @@
             self.wind.text = [NSString stringWithFormat:@"%@",dict[@"result"][@"today"][@"wind"]];
             self.temperature.text = [NSString stringWithFormat:@"%@",dict[@"result"][@"today"][@"temperature"]];
             self.timeCurrent.text = [NSString stringWithFormat:@"%@",dict[@"result"][@"today"][@"date_y"]];
-            
-            
-            
-            
+        
             
         } failure:^(NSError *error) {
             

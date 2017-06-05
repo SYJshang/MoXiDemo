@@ -10,7 +10,7 @@
 #import "SYJMainViewController.h"
 #import "SYJClassesController.h"
 #import "SYJEmojiController.h"
-#import "SYJMineController.h"
+//#import "SYJMineController.h"
 #import "SYJNavitionController.h"
 
 @interface SYJTabBarController ()
@@ -23,24 +23,23 @@
     [super viewDidLoad];
     
     
-    //主页
+    //
     SYJMainViewController *main = [[SYJMainViewController alloc]init] ;
     //    main.view.backgroundColor = [UIColor redColor];
     [self addChildVc:main Title:@"Recommend" withTitleSize:12.0 andFoneName:@"HelveticaNeue-Bold" selectedImage:@"推荐1" withTitleColor:TextColor unselectedImage:@"推荐2" withTitleColor:[UIColor lightGrayColor]];
-    //向导
+    //
     SYJClassesController  *caseVC = [[SYJClassesController alloc]init];
     //    caseVC.view.backgroundColor = [UIColor grayColor];
     [self addChildVc:caseVC Title:@"Classes" withTitleSize:12.0 andFoneName:@"HelveticaNeue-Bold" selectedImage:@"分类1" withTitleColor:TextColor unselectedImage:@"分类2" withTitleColor:[UIColor lightGrayColor]];
-    //新发现
+    //
     SYJEmojiController *fitVC = [[SYJEmojiController alloc]init];
-    //    fitVC.view.backgroundColor = [UIColor greenColor];
     [self addChildVc:fitVC Title:@"Emoji" withTitleSize:12.0 andFoneName:@"HelveticaNeue-Bold" selectedImage:@"表情1" withTitleColor:TextColor unselectedImage:@"表情2" withTitleColor:[UIColor lightGrayColor]];
     
     
     //我的
-    SYJMineController *MyVC = [[SYJMineController alloc]init];
-    //    MyVC.view.backgroundColor = [UIColor purpleColor];
-    [self addChildVc:MyVC Title:@"Mine" withTitleSize:12.0 andFoneName:@"HelveticaNeue-Bold" selectedImage:@"我的1" withTitleColor:TextColor unselectedImage:@"我的2" withTitleColor:[UIColor lightGrayColor]];
+//    SYJMineController *MyVC = [[SYJMineController alloc]init];
+//    //    MyVC.view.backgroundColor = [UIColor purpleColor];
+//    [self addChildVc:MyVC Title:@"Mine" withTitleSize:12.0 andFoneName:@"HelveticaNeue-Bold" selectedImage:@"我的1" withTitleColor:TextColor unselectedImage:@"我的2" withTitleColor:[UIColor lightGrayColor]];
     
     
     // Do any additional setup after loading the view.

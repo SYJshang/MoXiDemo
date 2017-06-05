@@ -12,6 +12,7 @@
 #import "SYJTemplateController.h"
 #import "SYJLockScreenController.h"
 #import "SYJEmojiVC.h"
+#import "YJCache.h"
 
 @interface SYJEmojiController ()<SGPageTitleViewDelegate, SGPageContentViewDelegare>
 @property (nonatomic, strong) SGPageTitleView *pageTitleView;
@@ -21,10 +22,29 @@
 
 @implementation SYJEmojiController
 
+- (void)cache{
+    
+    float cache = [YJCache filePath];
+    NSString *str = [NSString stringWithFormat:@"%.2f Mb",cache];
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"clear cache" message:[NSString stringWithFormat:@"Remove the %@ MB cache",str] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    
+    [YJCache clearFile];
+
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Blog Themes";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"clear cache" style:UIBarButtonItemStyleDone target:self action:@selector(cache)];
+
+    self.navigationItem.titleView = [UILabel titleWithColor:TextColor title:@"Blog Themes" font:18.0];
+
+//    self.title = @"Blog Themes";
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     
@@ -41,7 +61,7 @@
     [self.view addSubview:_pageContentView];
     
     
-    NSArray *titleArr = @[@"Theme", @"Template", @"Lock Screen", @"Emoji"];
+    NSArray *titleArr = @[@"Theme", @"Template", @"LockScreen", @"Emoji"];
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 44) delegate:self titleNames:titleArr];
     [self.view addSubview:_pageTitleView];
     _pageTitleView.selectedIndex = 1;

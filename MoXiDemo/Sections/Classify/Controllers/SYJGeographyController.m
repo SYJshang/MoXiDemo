@@ -11,8 +11,10 @@
 #import "SYJClassesCell.h"
 #import "SYJClassesModel.h"
 
-@interface SYJGeographyController ()<UICollectionViewDataSource,SYJCollectionFlowLayoutDelegate>{
+@interface SYJGeographyController ()<UICollectionViewDataSource,SYJCollectionFlowLayoutDelegate,UICollectionViewDelegate,SDPhotoBrowserDelegate>{
     int a;
+    SDPhotoBrowser *photoBrowser;
+    
 }
 
 @property (nonatomic, assign) NSInteger num;
@@ -49,6 +51,7 @@
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:    CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64) collectionViewLayout:layout];
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.dataSource = self;
+    collectionView.delegate = self;
     
     [self.view addSubview:collectionView];
     self.collectionView = collectionView;
@@ -152,6 +155,37 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    //
+    CATransform3D rotation;
+    rotation = CATransform3DMakeRotation((90.0*M_PI/180), 0.0, 0.7, 0.4);
+    rotation.m44 = 1.0/-600;
+    //阴影
+    cell.layer.shadowColor = [[UIColor blackColor]CGColor];
+    //阴影偏移
+    cell.layer.shadowOffset = CGSizeMake(10, 10);
+    //透明度
+    cell.alpha = 0;
+    
+    cell.layer.transform = rotation;
+    
+    //锚点
+    cell.layer.anchorPoint = CGPointMake(0.5, 0.5);
+    
+    [UIView beginAnimations:@"rotaion" context:NULL];
+    
+    [UIView setAnimationDuration:0.8];
+    
+    cell.layer.transform = CATransform3DIdentity;
+    
+    cell.alpha = 1;
+    cell.layer.shadowOffset = CGSizeMake(0, 0);
+    
+    [UIView commitAnimations];
+    
+}
+
+
 #pragma mark - <CYXWaterFlowLayoutDelegate>
 - (CGFloat)waterflowLayout:(SYJCollectionFlowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth
 {
@@ -172,6 +206,47 @@
 {
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    SYJClassesModel *model = self.listArr[indexPath.row];
+    
+    if (!NULLString(model.middleURL)) {
+        
+        SYJClassesCell *cell = (SYJClassesCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+        [XWScanImage scanBigImageWithImageView:cell.picImg];
+    }
+    
+    
+    
+}
+
+// 返回临时占位图片（即原来的小图）
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index
+{
+    
+    NSIndexPath *firstIndexPath = [[self.collectionView indexPathsForVisibleItems] firstObject];
+    SYJClassesModel *model = self.listArr[firstIndexPath.row];
+    UIImage * result;
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:model.middleURL]];
+    
+    result = [UIImage imageWithData:data];
+    
+    return result;
+    
+}
+
+
+// 返回高质量图片的url
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
+{
+    NSIndexPath *firstIndexPath = [[self.collectionView indexPathsForVisibleItems] firstObject];
+    SYJClassesModel *model = self.listArr[firstIndexPath.row];
+    return [NSURL URLWithString:model.middleURL];
+}
+
+
 
 
 - (void)didReceiveMemoryWarning {

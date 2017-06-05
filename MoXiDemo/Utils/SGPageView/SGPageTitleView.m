@@ -225,7 +225,8 @@ static CGFloat const SGPageTitleViewTextFont = 16;
             CGFloat btnX = btnW * index;
             btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
             btn.tag = index;
-            btn.titleLabel.font = [UIFont systemFontOfSize:SGPageTitleViewTextFont];
+//            Courier-BoldOblique
+            btn.titleLabel.font = [UIFont fontWithName:@"Georgia-Italic" size:SGPageTitleViewTextFont];
             [btn setTitle:self.titleArr[index] forState:(UIControlStateNormal)];
             [btn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
             [btn setTitleColor:[UIColor redColor] forState:(UIControlStateSelected)];
@@ -246,7 +247,7 @@ static CGFloat const SGPageTitleViewTextFont = 16;
             btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
             btnX = btnX + btnW;
             btn.tag = index;
-            btn.titleLabel.font = [UIFont systemFontOfSize:SGPageTitleViewTextFont];
+            btn.titleLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:SGPageTitleViewTextFont];
             [btn setTitle:self.titleArr[index] forState:(UIControlStateNormal)];
             [btn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
             [btn setTitleColor:[UIColor redColor] forState:(UIControlStateSelected)];

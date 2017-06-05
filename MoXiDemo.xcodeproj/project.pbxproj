@@ -22,6 +22,8 @@
 		351127351ED9569E00D9D1B8 /* SYJEmojiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351127341ED9569E00D9D1B8 /* SYJEmojiController.m */; };
 		351127381ED956AC00D9D1B8 /* SYJMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351127371ED956AC00D9D1B8 /* SYJMineController.m */; };
 		3511273D1ED9759D00D9D1B8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3511273C1ED9759D00D9D1B8 /* CoreLocation.framework */; };
+		354B724C1EE1614A00835F88 /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = 354B724A1EE1614A00835F88 /* confuse.sh */; };
+		354B724D1EE1614A00835F88 /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = 354B724B1EE1614A00835F88 /* func.list */; };
 		3569A5851EDFA65E0022F5B7 /* SYJCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569A5841EDFA65E0022F5B7 /* SYJCollectionFlowLayout.m */; };
 		3569A5891EDFA8060022F5B7 /* SYJArtController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569A5881EDFA8060022F5B7 /* SYJArtController.m */; };
 		3569A58C1EDFA81F0022F5B7 /* SYJFashionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569A58B1EDFA81F0022F5B7 /* SYJFashionController.m */; };
@@ -48,6 +50,12 @@
 		3569A5CE1EE0128B0022F5B7 /* SYJReviseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3569A5CC1EE0128B0022F5B7 /* SYJReviseController.xib */; };
 		3569A5D51EE025240022F5B7 /* SYJForgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569A5D31EE025240022F5B7 /* SYJForgetController.m */; };
 		3569A5D61EE025240022F5B7 /* SYJForgetController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3569A5D41EE025240022F5B7 /* SYJForgetController.xib */; };
+		3569A5D91EE05F750022F5B7 /* YJCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569A5D81EE05F750022F5B7 /* YJCache.m */; };
+		3569A5ED1EE065760022F5B7 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569A5E71EE065760022F5B7 /* SDBrowserImageView.m */; };
+		3569A5EE1EE065760022F5B7 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569A5E91EE065760022F5B7 /* SDPhotoBrowser.m */; };
+		3569A5EF1EE065760022F5B7 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569A5EC1EE065760022F5B7 /* SDWaitingView.m */; };
+		3569A5F21EE06B300022F5B7 /* XWScanImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569A5F11EE06B300022F5B7 /* XWScanImage.m */; };
+		3569A5FC1EE0FD950022F5B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3569A5FE1EE0FD950022F5B7 /* InfoPlist.strings */; };
 		35A979571ED836DE00B26AFA /* SYJHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A979561ED836DE00B26AFA /* SYJHttpHelper.m */; };
 		35A9795A1ED837A700B26AFA /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A979591ED837A700B26AFA /* UIImage+Category.m */; };
 		35B581EB1EDEA90900702D8C /* SYJPicTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B581EA1EDEA90900702D8C /* SYJPicTableCell.m */; };
@@ -88,6 +96,8 @@
 		351127361ED956AC00D9D1B8 /* SYJMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYJMineController.h; sourceTree = "<group>"; };
 		351127371ED956AC00D9D1B8 /* SYJMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYJMineController.m; sourceTree = "<group>"; };
 		3511273C1ED9759D00D9D1B8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		354B724A1EE1614A00835F88 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
+		354B724B1EE1614A00835F88 /* func.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = func.list; sourceTree = "<group>"; };
 		3569A5831EDFA65E0022F5B7 /* SYJCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYJCollectionFlowLayout.h; sourceTree = "<group>"; };
 		3569A5841EDFA65E0022F5B7 /* SYJCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYJCollectionFlowLayout.m; sourceTree = "<group>"; };
 		3569A5871EDFA8060022F5B7 /* SYJArtController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYJArtController.h; sourceTree = "<group>"; };
@@ -136,6 +146,20 @@
 		3569A5D21EE025240022F5B7 /* SYJForgetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYJForgetController.h; sourceTree = "<group>"; };
 		3569A5D31EE025240022F5B7 /* SYJForgetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYJForgetController.m; sourceTree = "<group>"; };
 		3569A5D41EE025240022F5B7 /* SYJForgetController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYJForgetController.xib; sourceTree = "<group>"; };
+		3569A5D71EE05F750022F5B7 /* YJCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJCache.h; sourceTree = "<group>"; };
+		3569A5D81EE05F750022F5B7 /* YJCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJCache.m; sourceTree = "<group>"; };
+		3569A5E61EE065760022F5B7 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		3569A5E71EE065760022F5B7 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		3569A5E81EE065760022F5B7 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		3569A5E91EE065760022F5B7 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		3569A5EA1EE065760022F5B7 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		3569A5EB1EE065760022F5B7 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		3569A5EC1EE065760022F5B7 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
+		3569A5F01EE06B300022F5B7 /* XWScanImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWScanImage.h; sourceTree = "<group>"; };
+		3569A5F11EE06B300022F5B7 /* XWScanImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWScanImage.m; sourceTree = "<group>"; };
+		3569A5FD1EE0FD950022F5B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3569A5FF1EE0FDA70022F5B7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3569A6001EE0FDAD0022F5B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35A979551ED836DE00B26AFA /* SYJHttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYJHttpHelper.h; sourceTree = "<group>"; };
 		35A979561ED836DE00B26AFA /* SYJHttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYJHttpHelper.m; sourceTree = "<group>"; };
 		35A979581ED837A700B26AFA /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
@@ -174,6 +198,8 @@
 		350D9E9D1ED8190C0025D6A6 = {
 			isa = PBXGroup;
 			children = (
+				354B724A1EE1614A00835F88 /* confuse.sh */,
+				354B724B1EE1614A00835F88 /* func.list */,
 				350D9EA81ED8190C0025D6A6 /* MoXiDemo */,
 				350D9EA71ED8190C0025D6A6 /* Products */,
 				5AD9D4D035518E575B73E54C /* Pods */,
@@ -243,6 +269,7 @@
 			children = (
 				350D9EC61ED81A360025D6A6 /* Assets.xcassets */,
 				350D9EE11ED81FC50025D6A6 /* PrefixHeader.pch */,
+				3569A5FE1EE0FD950022F5B7 /* InfoPlist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -263,6 +290,7 @@
 		350D9EC91ED81A360025D6A6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3569A5E51EE065760022F5B7 /* SDPhotoBrowser */,
 				35B581F81EDED22200702D8C /* SGPageView */,
 			);
 			path = Utils;
@@ -282,6 +310,10 @@
 		350D9EDD1ED81F510025D6A6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3569A5F01EE06B300022F5B7 /* XWScanImage.h */,
+				3569A5F11EE06B300022F5B7 /* XWScanImage.m */,
+				3569A5D71EE05F750022F5B7 /* YJCache.h */,
+				3569A5D81EE05F750022F5B7 /* YJCache.m */,
 				35A979581ED837A700B26AFA /* UIImage+Category.h */,
 				35A979591ED837A700B26AFA /* UIImage+Category.m */,
 				350D9EDE1ED81F8C0025D6A6 /* UILabel+SYJNavitaionTitleSize.h */,
@@ -402,6 +434,20 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		3569A5E51EE065760022F5B7 /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				3569A5E61EE065760022F5B7 /* SDBrowserImageView.h */,
+				3569A5E71EE065760022F5B7 /* SDBrowserImageView.m */,
+				3569A5E81EE065760022F5B7 /* SDPhotoBrowser.h */,
+				3569A5E91EE065760022F5B7 /* SDPhotoBrowser.m */,
+				3569A5EA1EE065760022F5B7 /* SDPhotoBrowserConfig.h */,
+				3569A5EB1EE065760022F5B7 /* SDWaitingView.h */,
+				3569A5EC1EE065760022F5B7 /* SDWaitingView.m */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		35B581F81EDED22200702D8C /* SGPageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +493,7 @@
 				350D9EA41ED8190C0025D6A6 /* Resources */,
 				8A33054315F652645C0957AE /* [CP] Embed Pods Frameworks */,
 				61289EE8B76CFEDE636AD7D4 /* [CP] Copy Pods Resources */,
+				354B724E1EE1625800835F88 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -478,8 +525,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
+				en,
 			);
 			mainGroup = 350D9E9D1ED8190C0025D6A6;
 			productRefGroup = 350D9EA71ED8190C0025D6A6 /* Products */;
@@ -497,10 +545,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				350D9ECE1ED81ABE0025D6A6 /* Info.plist in Resources */,
+				3569A5FC1EE0FD950022F5B7 /* InfoPlist.strings in Resources */,
 				3569A5D61EE025240022F5B7 /* SYJForgetController.xib in Resources */,
 				3569A5C61EE0122F0022F5B7 /* SYJRegisterController.xib in Resources */,
 				3569A5CE1EE0128B0022F5B7 /* SYJReviseController.xib in Resources */,
+				354B724D1EE1614A00835F88 /* func.list in Resources */,
 				3569A5BE1EE011EC0022F5B7 /* SYJLoginController.xib in Resources */,
+				354B724C1EE1614A00835F88 /* confuse.sh in Resources */,
 				350D9ECB1ED81A360025D6A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +559,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		354B724E1EE1625800835F88 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = $PROJECT_DIR/confuse.sh;
+		};
 		61289EE8B76CFEDE636AD7D4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -565,6 +629,7 @@
 				35B582051EDED38600702D8C /* SYJNavigationBar.m in Sources */,
 				35B582011EDED22200702D8C /* SGPageTitleView.m in Sources */,
 				3569A58C1EDFA81F0022F5B7 /* SYJFashionController.m in Sources */,
+				3569A5D91EE05F750022F5B7 /* YJCache.m in Sources */,
 				350D9ECA1ED81A360025D6A6 /* AppDelegate.m in Sources */,
 				3569A5AD1EDFD9640022F5B7 /* SYJTemplateController.m in Sources */,
 				3569A5A11EDFA8AB0022F5B7 /* SYJLolitaController.m in Sources */,
@@ -574,6 +639,7 @@
 				3569A5AA1EDFD9510022F5B7 /* SYJThemeController.m in Sources */,
 				35B581EB1EDEA90900702D8C /* SYJPicTableCell.m in Sources */,
 				350D9EDB1ED81C2C0025D6A6 /* SYJTabBarController.m in Sources */,
+				3569A5EE1EE065760022F5B7 /* SDPhotoBrowser.m in Sources */,
 				350D9EAB1ED8190C0025D6A6 /* main.m in Sources */,
 				35B582001EDED22200702D8C /* SGPageContentView.m in Sources */,
 				3569A5BD1EE011EC0022F5B7 /* SYJLoginController.m in Sources */,
@@ -587,6 +653,7 @@
 				3569A5951EDFA8480022F5B7 /* SYJChineseController.m in Sources */,
 				350D9ED81ED81BF20025D6A6 /* SYJNavitionController.m in Sources */,
 				350D9EE01ED81F8C0025D6A6 /* UILabel+SYJNavitaionTitleSize.m in Sources */,
+				3569A5ED1EE065760022F5B7 /* SDBrowserImageView.m in Sources */,
 				350D9EE71ED8234C0025D6A6 /* UIViewController+SYJViewContoller.m in Sources */,
 				3569A58F1EDFA82C0022F5B7 /* SYJDewController.m in Sources */,
 				3569A5A41EDFA9B50022F5B7 /* SYJClassesCell.m in Sources */,
@@ -599,19 +666,35 @@
 				3569A5921EDFA8380022F5B7 /* SYJPlayController.m in Sources */,
 				35B581EE1EDEAB7B00702D8C /* SYJPicRecommendModel.m in Sources */,
 				3569A5981EDFA85B0022F5B7 /* SYJEvodutionController.m in Sources */,
+				3569A5F21EE06B300022F5B7 /* XWScanImage.m in Sources */,
 				3569A5D51EE025240022F5B7 /* SYJForgetController.m in Sources */,
 				3569A5B01EDFD97D0022F5B7 /* SYJLockScreenController.m in Sources */,
 				351127381ED956AC00D9D1B8 /* SYJMineController.m in Sources */,
+				3569A5EF1EE065760022F5B7 /* SDWaitingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3569A5FE1EE0FD950022F5B7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3569A5FD1EE0FD950022F5B7 /* Base */,
+				3569A5FF1EE0FDA70022F5B7 /* zh-Hans */,
+				3569A6001EE0FDAD0022F5B7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		350D9EBB1ED8190C0025D6A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -661,6 +744,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -712,6 +796,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syjPic.moxi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -727,6 +812,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syjPic.moxi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -14,7 +14,7 @@
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(KSceenW / 2 - 100,0, 200, 44)];
     //    titleLabel.backgroundColor = [UIColor grayColor];
-    titleLabel.font = [UIFont systemFontOfSize:font];
+    titleLabel.font = [UIFont fontWithName:@"DBLCDTempBlack" size:font];
     titleLabel.textColor = color;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = title;

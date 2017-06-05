@@ -58,6 +58,8 @@
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44) delegate:self titleNames:titleArr];
     _pageTitleView.isShowIndicator = NO;
     _pageTitleView.selectedIndex = 3;
+    _pageTitleView.titleColorStateSelected = TextColor;
+    _pageTitleView.titleColorStateNormal = [UIColor grayColor];
     // 对 navigationItem.titleView 的包装，为的是 让View 占据整个视图宽度
     SYJNavigationBar *view = [[SYJNavigationBar alloc] init];
     self.navigationItem.titleView = view;
